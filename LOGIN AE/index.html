@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="img/elige_hoy.png" type="image/png">
+</head>
+<body>
+<!-- Contenedor del Video -->
+<div class="video-container">
+    <video autoplay muted loop>
+        <source src="video/CASCADA.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+    </video>
+</div>
+
+<!-- Contenedor del Login -->
+<div class="login-container">
+    <div class="logo">
+        <img src="img/elige_hoy.png" alt="Logo">
+    </div>
+    <header class="header">Bienvenido</header>
+
+    <input type="text" placeholder="Usuario">
+    <input type="password" placeholder="Contraseña">
+    <button>Ingresar</button>
+    
+    <a href="#">¿Has olvidado tu contraseña?</a>
+    
+</div>
+
+<script> 
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordField = document.getElementById('contraseña');
+
+    togglePassword.addEventListener('click', function () {
+        const type = passwordField.type === 'password' ? 'text' : 'password';
+        passwordField.type = type;
+    });
+</script>
+</body>
+</html>
